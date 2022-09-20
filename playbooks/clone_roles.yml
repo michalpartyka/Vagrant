@@ -8,11 +8,11 @@
   tasks:
     - name: create folder
       file:
-          path: /etc/ansible/roles
-          state: directory
-          mode: 0755
+        path: /etc/ansible/roles
+        state: directory
+        mode: '0755'
     - name: git checkout
       git:
-        repo: "{{ git_repository}}"
+        repo: "{{ git_repository }}"
         dest: "/etc/ansible/roles"
-        version: "{{git_branch}}"        
+        version: "{{ git_branch }}"        
